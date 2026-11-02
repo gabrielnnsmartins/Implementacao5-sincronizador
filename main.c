@@ -1,21 +1,45 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include<pthreads>
+#include<pthreads.h>
 
-typedef sctruct station{
+typedef struct station{
     int passageiros_esperando;
     int assentos_disponiveis;
+    int passageiros_autorizados;
     int passageiros_embarcados;
 }station;
 
-station_load_car(station *station, int cont){
-    if (station != NULL){
-        if (station->assentos_disponiveis == 0){
-            return;
-        }else{
-            cont = passageiros_esperando - assentos_disponiveis;
-            station->passageiros_embarcados += station->assentos_disponiveis;
-            
+void station_load_car(station *station, int count){
+    if (station == NULL){
+        retun;
+    }else{
+            if (station->passageiros_esperando == 0){
+                return;
+            }
+
+            if(count != 0){
+                station->assentos_disponiveis = count;
+            }
+        }
+    }
+
+void station_wait_for_car(station *station){
+    if(station != NULL){
+        if (station->assentos_disponiveis != 0 && station->assentos_disponiveis > 0){
+            if(station->passageiros_esperando!=0 && station->passageiros_esperando>0){
+            int temp = station->passageiros_esperando - station->assentos_disponiveis;
+            station->passageiros_autorizados = station->passageiros_esperando - temp;
+            station->assentos disponiveis -= station->passageiros_autorizados;
+            }
+        }
+    }
+}
+
+void station_on_board(station *station){
+    if(station!=NULL){
+        if (station->passageiros_autorizados != 0 && station->passageiros_autorizados > 0){
+            station->passageiros_embarcados+=1;
+            station->passageiros_autorizados-=1;
         }
     }
 }
