@@ -11,7 +11,7 @@ typedef struct station{
 
 void station_load_car(station *station, int count){
     if (station == NULL){
-        retun;
+        return;
     }else{
             if (station->passageiros_esperando == 0){
                 return;
@@ -29,7 +29,7 @@ void station_wait_for_car(station *station){
             if(station->passageiros_esperando!=0 && station->passageiros_esperando>0){
             int temp = station->passageiros_esperando - station->assentos_disponiveis;
             station->passageiros_autorizados = station->passageiros_esperando - temp;
-            station->assentos disponiveis -= station->passageiros_autorizados;
+            station->assentos_disponiveis -= station->passageiros_autorizados;
             }
         }
     }
