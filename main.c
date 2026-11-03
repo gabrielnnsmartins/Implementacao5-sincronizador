@@ -3,12 +3,25 @@
 #include<pthreads.h>
 
 typedef struct station{
-    bool cond_mutex;
+    pthread_mutex_t tranca;
+    pthread_cond_t carro_chegou;
+    pthread_cond_t todos_embarcaram;
     int passageiros_esperando;
     int assentos_disponiveis;
     int passageiros_autorizados;
     int passageiros_embarcados;
 }station;
+
+void station_init(station *station){
+    pthread_mutex_init(&station->tranca, NULL);
+    pthread_mutex_init(&station->carro_chegou, NULL);
+    pthread_mutex_init(&station->todos_embarcaram, NULL);
+    station->passageiros_esperando = 0;
+    station->assentos_disponiveis = 0;
+    station->passageiros_autorizados = 0;
+    station->passageiros_embarcados = 0;
+}
+
 
 void station_load_car(station *station, int count){
     if (station == NULL){
