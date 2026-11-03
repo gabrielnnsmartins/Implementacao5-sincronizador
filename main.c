@@ -54,7 +54,3 @@ void station_on_board(station *station){
     }
 }
  
-
-voi passageiro(){
-
-}
