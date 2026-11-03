@@ -27,18 +27,25 @@ void station_load_car(station *station, int count){
     if (station == NULL){
         return;
     }else{
-            if (station->passageiros_esperando == 0){
-                return;
-            }
+            if(count != 0 && count > 0){
+                pthread_mutex_lock(&station->tranca);
+                int n_assentos;
+                if(count > station->passageiros_esperando){
+                    n_assentos = station->passageiros_esperando;
+                }else{
+                    n_assentos = count;
+                }
 
-            if(count != 0){
-                station->assentos_disponiveis = count;
-
+                station->assentos_disponiveis = n_assentos;
+                pthread_cond_broadcast(&station->carro_chegou);
                 
-            if(station->assentos_disponiveis == 0 || station->passageiros_esperando == 0){
+                while(station->assentos_disponiveis > 0 && station->passageiros_esperando > 0){
+                    pthread_cond_wait(&station->todos_embarcaram, &station->tranca);
+                }
+
+                pthread_mutex_unlock(&station->tranca);
                 return;
             }
-        }
         }
     }
 
