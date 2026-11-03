@@ -3,6 +3,7 @@
 #include<pthreads.h>
 
 typedef struct station{
+    bool cond_mutex;
     int passageiros_esperando;
     int assentos_disponiveis;
     int passageiros_autorizados;
@@ -19,19 +20,28 @@ void station_load_car(station *station, int count){
 
             if(count != 0){
                 station->assentos_disponiveis = count;
+
+                
+            if(station->assentos_disponiveis == 0 || station->passageiros_esperando == 0){
+                return;
             }
+        }
         }
     }
 
 void station_wait_for_car(station *station){
     if(station != NULL){
+
+        if(station->passageiros_esperando>0){
         if (station->assentos_disponiveis != 0 && station->assentos_disponiveis > 0){
             if(station->passageiros_esperando!=0 && station->passageiros_esperando>0){
             int temp = station->passageiros_esperando - station->assentos_disponiveis;
             station->passageiros_autorizados = station->passageiros_esperando - temp;
+            station->passageiros_esperando -= station->passageiros_autorizados;
             station->assentos_disponiveis -= station->passageiros_autorizados;
             }
         }
+    }
     }
 }
 
@@ -44,3 +54,7 @@ void station_on_board(station *station){
     }
 }
  
+
+voi passageiro(){
+
+}
