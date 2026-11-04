@@ -1,0 +1,24 @@
+Script iniciado em 2026-11-04 11:38:20-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ git add .
+[?2004l[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ git commit -m "Criação do makefile e do [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Km "Criação do makefile e do evidencias.log"
+[?2004l[main cf2235d] Criação do makefile e do evidencias.log
+ 2 files changed, 13 insertions(+)
+ create mode 100644 Makefile
+ create mode 100644 evidencias.log
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ git push
+[?2004lEnumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 439 bytes | 439.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:gabrielnnsmartins/Implementacao5-sincronizador.git
+   18226ca..cf2235d  main -> main
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ exit
+[?2004lexit
+
+Script concluído em 2026-11-04 11:55:17-03:00 [COMMAND_EXIT_CODE="0"]
