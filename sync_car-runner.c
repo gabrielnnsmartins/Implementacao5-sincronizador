@@ -132,7 +132,7 @@ void _alarm(int seconds, const char *error_str)
 	alarm(seconds);
 }
 
-void alarm_handler(int foo)
+void alarm_handler()
 {
 	fprintf(stderr, "Error: Failed to complete after %d seconds. Something's "
                     "wrong, or your system is terribly slow. Possible error hint: [%s]\n",

@@ -1,8 +1,8 @@
-app: main.o
+app: sync_car-runner.o
 	gcc sync_car-runner.o -o app
 
-main.o: main.c
-	gcc -c sync_car-runner.c
+sync_car-runner.o: sync_car-runner.c
+	gcc -Wall -Wextra -pthread -c sync_car-runner.c
 
 run: app
 	./app

@@ -83,3 +83,59 @@ exit
 
 Script concluído em 2026-11-04 15:54:35-03:00 [COMMAND_EXIT_CODE="0"]
 
+Script iniciado em 2026-11-04 16:12:00-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ exitgcc -Wall -Wextra -pthread -c sync_car-runner.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kgcc -Wall -Wextra -pthread -c sync_car-runner.c
+[?2004l[01m[Ksync_car-runner.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ksync_car-runner.c:135:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  135 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ gcc -Wall -Wextra -pthread -c sync_car-runner.c
+[?2004l[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ gcc -Wall -Wextra -pthread -c sync_car-runner.c[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmain[K[K[K[Ksync_car_[K-runner.o -o app
+[?2004l[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ ./app
+[?2004lcar entering station with 15 free seats
+car departed station with 15 new passenger(s) (expected 15)
+car entering station with 14 free seats
+car departed station with 14 new passenger(s) (expected 14)
+car entering station with 40 free seats
+car departed station with 40 new passenger(s) (expected 40)
+car entering station with 14 free seats
+car departed station with 14 new passenger(s) (expected 14)
+car entering station with 8 free seats
+car departed station with 8 new passenger(s) (expected 8)
+car entering station with 20 free seats
+car departed station with 9 new passenger(s) (expected 9)
+Looks good!
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ exit
+[?2004lexit
+
+Script concluído em 2026-11-04 16:19:13-03:00 [COMMAND_EXIT_CODE="0"]
+Script iniciado em 2026-11-04 16:29:06-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ make clean
+[?2004lrm -f *.o app
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ make run 
+[?2004lgcc -Wall -Wextra -pthread -c sync_car-runner.c
+gcc sync_car-runner.o -o app
+./app
+car entering station with 9 free seats
+car departed station with 9 new passenger(s) (expected 9)
+car entering station with 45 free seats
+car departed station with 45 new passenger(s) (expected 45)
+car entering station with 40 free seats
+car departed station with 40 new passenger(s) (expected 40)
+car entering station with 3 free seats
+car departed station with 3 new passenger(s) (expected 3)
+car entering station with 22 free seats
+car departed station with 3 new passenger(s) (expected 3)
+Looks good!
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ git [K[K[K[Kexit
+[?2004lexit
+
+Script concluído em 2026-11-04 16:29:38-03:00 [COMMAND_EXIT_CODE="0"]
