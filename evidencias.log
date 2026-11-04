@@ -1,24 +1,85 @@
 Script iniciado em 2026-11-04 11:38:20-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
 [?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
-sincronizador[00m$ git add .
-[?2004l[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
-sincronizador[00m$ git commit -m "Criação do makefile e do [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Km "Criação do makefile e do evidencias.log"
-[?2004l[main cf2235d] Criação do makefile e do evidencias.log
+
+sincronizador[00m$ git add .
+[?2004l
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+
+sincronizador[00m$ git commit -m "Criação do makefile e do [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Km "Criação do makefile e do evidencias.log"
+[?2004l
+[main cf2235d] Criação do makefile e do evidencias.log
  2 files changed, 13 insertions(+)
  create mode 100644 Makefile
  create mode 100644 evidencias.log
 [?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
-sincronizador[00m$ git push
-[?2004lEnumerating objects: 5, done.
-Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+
+sincronizador[00m$ git push
+[?2004l
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)
+Counting objects:  40% (2/5)
+Counting objects:  60% (3/5)
+Counting objects:  80% (4/5)
+Counting objects: 100% (5/5)
+Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
-Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
-Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 439 bytes | 439.00 KiB/s, done.
+Compressing objects:  33% (1/3)
+Compressing objects:  66% (2/3)
+Compressing objects: 100% (3/3)
+Compressing objects: 100% (3/3), done.
+Writing objects:  25% (1/4)
+Writing objects:  50% (2/4)
+Writing objects:  75% (3/4)
+Writing objects: 100% (4/4)
+Writing objects: 100% (4/4), 439 bytes | 439.00 KiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 To github.com:gabrielnnsmartins/Implementacao5-sincronizador.git
    18226ca..cf2235d  main -> main
 [?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
-sincronizador[00m$ exit
-[?2004lexit
+
+sincronizador[00m$ exit
+[?2004l
+exit
 
 Script concluído em 2026-11-04 11:55:17-03:00 [COMMAND_EXIT_CODE="0"]
+
+Script iniciado em 2026-11-04 15:53:48-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+
+sincronizador[00m$ exitgcc -Wall -Wextra -pthread -c sync_car-runner.c
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[Kgcc -Wall -Wextra -pthread -c sync_car-runner.c
+[?2004l
+[01m[Ksync_car-runner.c:[m[K In function ‘[01m[Kstation_init[m[K’:
+[01m[Ksync_car-runner.c:30:24:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kpthread_mutex_init[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   30 |     pthread_mutex_init([01;35m[K&station->carro_chegou[m[K, NULL);
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                        [01;35m[K|[m[K
+      |                        [01;35m[Kpthread_cond_t *[m[K
+In file included from [01m[Ksync_car-runner.c:15[m[K:
+[01m[K/usr/include/pthread.h:781:49:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kpthread_mutex_t *[m[K’ but argument is of type ‘[01m[Kpthread_cond_t *[m[K’
+  781 | extern int pthread_mutex_init ([01;36m[Kpthread_mutex_t *__mutex[m[K,
+      |                                [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[Ksync_car-runner.c:31:24:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kpthread_mutex_init[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   31 |     pthread_mutex_init([01;35m[K&station->todos_embarcaram[m[K, NULL);
+      |                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                        [01;35m[K|[m[K
+      |                        [01;35m[Kpthread_cond_t *[m[K
+[01m[K/usr/include/pthread.h:781:49:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kpthread_mutex_t *[m[K’ but argument is of type ‘[01m[Kpthread_cond_t *[m[K’
+  781 | extern int pthread_mutex_init ([01;36m[Kpthread_mutex_t *__mutex[m[K,
+      |                                [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[Ksync_car-runner.c:[m[K In function ‘[01m[Kstation_load_car[m[K’:
+[01m[Ksync_car-runner.c:54:53:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K&&[m[K’ within ‘[01m[K||[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+   54 |             while([01;35m[Kstation->assentos_disponiveis > 0 && station->passageiros_esperando > 0[m[K || station->passageiros_autorizados > 0){
+      |                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[Ksync_car-runner.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ksync_car-runner.c:135:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  135 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+
+sincronizador[00m$ exit
+[?2004l
+exit
+
+Script concluído em 2026-11-04 15:54:35-03:00 [COMMAND_EXIT_CODE="0"]
+

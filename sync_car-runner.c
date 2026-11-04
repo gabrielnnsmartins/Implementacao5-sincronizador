@@ -27,8 +27,8 @@ typedef struct station{
 
 void station_init(station *station){
     pthread_mutex_init(&station->tranca, NULL);
-    pthread_mutex_init(&station->carro_chegou, NULL);
-    pthread_mutex_init(&station->todos_embarcaram, NULL);
+    pthread_cond_init(&station->carro_chegou, NULL);
+    pthread_cond_init(&station->todos_embarcaram, NULL);
     station->passageiros_esperando = 0;
     station->assentos_disponiveis = 0;
     station->passageiros_autorizados = 0;
@@ -51,7 +51,7 @@ void station_load_car(station *station, int count){
             station->assentos_disponiveis = count;
             pthread_cond_broadcast(&station->carro_chegou);
                 
-            while(station->assentos_disponiveis > 0 && station->passageiros_esperando > 0 || station->passageiros_autorizados > 0){
+            while((station->assentos_disponiveis > 0 && station->passageiros_esperando > 0) || station->passageiros_autorizados > 0){
                 pthread_cond_wait(&station->todos_embarcaram, &station->tranca);
             }
 
