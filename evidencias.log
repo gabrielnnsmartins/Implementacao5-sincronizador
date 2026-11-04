@@ -139,3 +139,63 @@ Looks good!
 [?2004lexit
 
 Script concluído em 2026-11-04 16:29:38-03:00 [COMMAND_EXIT_CODE="0"]
+Script iniciado em 2026-11-04 16:44:19-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ exitmake run clean[1Prun clean
+[?2004lrm -f *.o app
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ make run
+[?2004lgcc -Wall -Wextra -pthread -c sync_car-runner.c
+[01m[Ksync_car-runner.c:[m[K In function ‘[01m[Kalarm_handler[m[K’:
+[01m[Ksync_car-runner.c:54:24:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfoo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   54 | void alarm_handler([01;35m[Kint foo[m[K)
+      |                    [01;35m[K~~~~^~~[m[K
+gcc sync_car-runner.o -o app
+./app
+car entering station with 26 free seats
+car departed station with 26 new passenger(s) (expected 26)
+car entering station with 35 free seats
+car departed station with 35 new passenger(s) (expected 35)
+car entering station with 23 free seats
+car departed station with 23 new passenger(s) (expected 23)
+car entering station with 25 free seats
+car departed station with 16 new passenger(s) (expected 16)
+Looks good!
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-
+sincronizador[00m$ [K[A[K]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ [K]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ git add .
+[?2004l[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ git commit -m "Corrigi o erro que estava apontando no código"
+[?2004l[main aa63696] Corrigi o erro que estava apontando no código
+ 3 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100755 app
+ create mode 100644 sync_car-runner.o
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ git push
+[?2004lEnumerating objects: 7, done.
+Counting objects:  14% (1/7)Counting objects:  28% (2/7)Counting objects:  42% (3/7)Counting objects:  57% (4/7)Counting objects:  71% (5/7)Counting objects:  85% (6/7)Counting objects: 100% (7/7)Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  20% (1/5)Writing objects:  40% (2/5)Writing objects:  60% (3/5)Writing objects:  80% (4/5)Writing objects: 100% (5/5)Writing objects: 100% (5/5), 7.56 KiB | 3.78 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To github.com:gabrielnnsmartins/Implementacao5-sincronizador.git
+   b60a099..aa63696  main -> main
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ make clean
+[?2004lrm -f *.o app
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ make run 
+[?2004lgcc -Wall -Wextra -pthread -c sync_car-runner.c
+gcc sync_car-runner.o -o app
+./app
+car entering station with 10 free seats
+car departed station with 10 new passenger(s) (expected 10)
+car entering station with 30 free seats
+car departed station with 30 new passenger(s) (expected 30)
+car entering station with 46 free seats
+car departed station with 46 new passenger(s) (expected 46)
+car entering station with 10 free seats
+car departed station with 10 new passenger(s) (expected 10)
+car entering station with 47 free seats
+car departed station with 4 new passenger(s) (expected 4)
+Looks good!
+[?2004h]0;gabnns@NOTEBOOK-DE-GAB-ESTUDO: ~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[01;32mgabnns@NOTEBOOK-DE-GAB-ESTUDO[00m:[01;34m~/Área de trabalho/Implementacao_5/Implementacao5-sincronizador[00m$ exit
+[?2004lexit
+
+Script concluído em 2026-11-04 16:49:33-03:00 [COMMAND_EXIT_CODE="0"]
