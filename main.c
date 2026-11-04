@@ -6,6 +6,7 @@ typedef struct station{
     pthread_mutex_t tranca;
     pthread_cond_t carro_chegou;
     pthread_cond_t todos_embarcaram;
+    int carro_na_estacao;
     int passageiros_esperando;
     int assentos_disponiveis;
     int passageiros_autorizados;
@@ -20,6 +21,7 @@ void station_init(station *station){
     station->assentos_disponiveis = 0;
     station->passageiros_autorizados = 0;
     station->passageiros_embarcados = 0;
+    station->carro_na_estacao = 0;
 }
 
 
@@ -33,13 +35,16 @@ void station_load_car(station *station, int count){
 
             pthread_mutex_lock(&station->tranca);
                 
-
+            station->carro_na_estacao = 1;
             station->assentos_disponiveis = count;
             pthread_cond_broadcast(&station->carro_chegou);
                 
             while(station->assentos_disponiveis > 0 && station->passageiros_esperando > 0 || station->passageiros_autorizados > 0){
                 pthread_cond_wait(&station->todos_embarcaram, &station->tranca);
             }
+
+            station->carro_na_estacao = 0;
+            station->assentos_disponiveis = 0;
 
             pthread_mutex_unlock(&station->tranca);
             return;
@@ -52,7 +57,7 @@ void station_wait_for_car(station *station){
 
         station->passageiros_esperando+=1;
 
-            while(station->assentos_disponiveis == 0){
+            while(station->carro_na_estacao == 0||station->assentos_disponiveis == 0){
                 pthreads_cond_wait(&station->chegou_carro, &station->tranca);
             }
 
@@ -62,7 +67,7 @@ void station_wait_for_car(station *station){
 
         pthread_mutex_unlock(&station->tranca);
         return;
-        
+
     }else{
         return;
     }
