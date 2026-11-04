@@ -37,7 +37,7 @@ void station_load_car(station *station, int count){
             station->assentos_disponiveis = count;
             pthread_cond_broadcast(&station->carro_chegou);
                 
-            while(station->assentos_disponiveis > 0 && station->passageiros_esperando > 0){
+            while(station->assentos_disponiveis > 0 && station->passageiros_esperando > 0 || station->passageiros_autorizados > 0){
                 pthread_cond_wait(&station->todos_embarcaram, &station->tranca);
             }
 
@@ -61,16 +61,20 @@ void station_wait_for_car(station *station){
             station->passageiros_autorizados += 1;
 
         pthread_mutex_unlock(&station->tranca);
+        return;
+        
+    }else{
+        return;
     }
 }
 
 void station_on_board(station *station){
     if(station!=NULL){
         pthreads_mutex_lock(&station->tranca);
-        if (station->passageiros_autorizados != 0 && station->passageiros_autorizados > 0){
-            station->passageiros_embarcados+=1;
-            station->passageiros_autorizados-=1;
-        }
+        
+        station->passageiros_autorizados -= 1;
+
+        pthread_cond_signal(&station->todos_embarcaram);
 
         pthread_mutex_unlock(&station->tranca);
     }
