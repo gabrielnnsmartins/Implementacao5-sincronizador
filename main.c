@@ -1,6 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
-#include<pthreads.h>
+#include<pthread.h>
 
 typedef struct station{
     pthread_mutex_t tranca;
@@ -58,7 +58,7 @@ void station_wait_for_car(station *station){
         station->passageiros_esperando+=1;
 
             while(station->carro_na_estacao == 0||station->assentos_disponiveis == 0){
-                pthreads_cond_wait(&station->chegou_carro, &station->tranca);
+                pthread_cond_wait(&station->carro_chegou, &station->tranca);
             }
 
             station->passageiros_esperando -= 1;
@@ -75,7 +75,7 @@ void station_wait_for_car(station *station){
 
 void station_on_board(station *station){
     if(station!=NULL){
-        pthreads_mutex_lock(&station->tranca);
+        pthread_mutex_lock(&station->tranca);
         
         station->passageiros_autorizados -= 1;
 
@@ -84,4 +84,3 @@ void station_on_board(station *station){
         pthread_mutex_unlock(&station->tranca);
     }
 }
- 
